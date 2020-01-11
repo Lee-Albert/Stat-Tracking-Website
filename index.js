@@ -15,12 +15,12 @@ app.get('/', function (req, res) {
 var uri = 'https://api.fortnitetracker.com/v1/profile/'
 // https://api.fortnitetracker.com/v1/profile/{platform}/{epic-nickname}
 // pc, xbl, psn
-// TRN-Api-Key: 30d121b9-975d-4044-8dc2-7067feab05d5
+// TRN-Api-Key: 5bf0bc74-9055-4354-8b7a-f88cba288276
 app.post('/', function (req, res) {
     console.log(req.body);
     request.get(uri + req.body.dropDownValue + '/' + req.body.epicNickName, {
         headers: {
-            'TRN-Api-Key': '30d121b9-975d-4044-8dc2-7067feab05d5'
+            'TRN-Api-Key': '5bf0bc74-9055-4354-8b7a-f88cba288276'
         }}, function(error, response, body) {
             console.log(body);
             res.json(body);
